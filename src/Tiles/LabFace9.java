@@ -1,0 +1,28 @@
+package Tiles;
+
+/**
+ * LabFace9 tile
+ * @author Ran Crook
+ */
+
+import javax.imageio.ImageIO;
+import java.io.IOException;
+
+public class LabFace9 extends Tile
+{
+    public LabFace9()
+    {
+        super(null);
+        try {
+            setImage(ImageIO.read(getClass().getResource("/Tiles/Tile Images/LabFace9.png")));
+        }
+        catch (IOException ex) {
+            setImage(null);
+        }
+    }
+
+    public boolean canBeTraversed()
+    {
+        return false;
+    }
+}
